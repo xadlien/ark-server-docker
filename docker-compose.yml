@@ -25,7 +25,7 @@ services:
       - "sessionname=KnorrFamilyServer"
       - "mapname=Ragnarok"
     volumes:
-      - "./save-data:/ark/ShooterGame/Saved"  Fjordur
+      - "./save-data:/ark/ShooterGame/Saved"
   ark-server-fjordur:
     image: ark:latest
     network_mode: bridge
