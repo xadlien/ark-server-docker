@@ -13,6 +13,32 @@ services:
       - "mapname=TheIsland"
     volumes:
       - "./save-data:/ark/ShooterGame/Saved"
+  ark-server-center:
+    image: ark:latest
+    network_mode: bridge
+    ports:
+      - "27015:27015/udp"
+      - "7777:7777/udp"
+      - "32330:32330/udp"
+    environment:
+      - "clusterid=knorrark"
+      - "sessionname=KnorrFamilyServer"
+      - "mapname=TheCenter"
+    volumes:
+      - "./save-data:/ark/ShooterGame/Saved"
+  ark-server-scorched:
+    image: ark:latest
+    network_mode: bridge
+    ports:
+      - "27015:27015/udp"
+      - "7777:7777/udp"
+      - "32330:32330/udp"
+    environment:
+      - "clusterid=knorrark"
+      - "sessionname=KnorrFamilyServer"
+      - "mapname=ScorchedEarth_P"
+    volumes:
+      - "./save-data:/ark/ShooterGame/Saved"
   ark-server-ragnarok:
     image: ark:latest
     network_mode: bridge
@@ -24,6 +50,97 @@ services:
       - "clusterid=knorrark"
       - "sessionname=KnorrFamilyServer"
       - "mapname=Ragnarok"
+    volumes:
+      - "./save-data:/ark/ShooterGame/Saved"
+  ark-server-aberration:
+    image: ark:latest
+    network_mode: bridge
+    ports:
+      - "27016:27015/udp"
+      - "7778:7777/udp"
+      - "32331:32330/udp"
+    environment:
+      - "clusterid=knorrark"
+      - "sessionname=KnorrFamilyServer"
+      - "mapname=Aberration_P"
+    volumes:
+      - "./save-data:/ark/ShooterGame/Saved"
+  ark-server-extinction:
+    image: ark:latest
+    network_mode: bridge
+    ports:
+      - "27016:27015/udp"
+      - "7778:7777/udp"
+      - "32331:32330/udp"
+    environment:
+      - "clusterid=knorrark"
+      - "sessionname=KnorrFamilyServer"
+      - "mapname=Extinction"
+    volumes:
+      - "./save-data:/ark/ShooterGame/Saved"
+  ark-server-valguero:
+    image: ark:latest
+    network_mode: bridge
+    ports:
+      - "27016:27015/udp"
+      - "7778:7777/udp"
+      - "32331:32330/udp"
+    environment:
+      - "clusterid=knorrark"
+      - "sessionname=KnorrFamilyServer"
+      - "mapname=Valguero_P"
+    volumes:
+      - "./save-data:/ark/ShooterGame/Saved"
+  ark-server-genesis:
+    image: ark:latest
+    network_mode: bridge
+    ports:
+      - "27016:27015/udp"
+      - "7778:7777/udp"
+      - "32331:32330/udp"
+    environment:
+      - "clusterid=knorrark"
+      - "sessionname=KnorrFamilyServer"
+      - "mapname=Genesis"
+    volumes:
+      - "./save-data:/ark/ShooterGame/Saved"
+  ark-server-crystalisles:
+    image: ark:latest
+    network_mode: bridge
+    ports:
+      - "27016:27015/udp"
+      - "7778:7777/udp"
+      - "32331:32330/udp"
+    environment:
+      - "clusterid=knorrark"
+      - "sessionname=KnorrFamilyServer"
+      - "mapname=CrystalIsles"
+    volumes:
+      - "./save-data:/ark/ShooterGame/Saved"
+  ark-server-genesis2:
+    image: ark:latest
+    network_mode: bridge
+    ports:
+      - "27016:27015/udp"
+      - "7778:7777/udp"
+      - "32331:32330/udp"
+    environment:
+      - "clusterid=knorrark"
+      - "sessionname=KnorrFamilyServer"
+      - "mapname=Gen2"
+    volumes:
+      - "./save-data:/ark/ShooterGame/Saved"
+  ark-server-lostisland:
+    image: ark:latest
+    network_mode: bridge
+    ports:
+      - "27016:27015/udp"
+      - "7778:7777/udp"
+      - "32331:32330/udp"
+    environment:
+      - "clusterid=knorrark"
+      - "sessionname=KnorrFamilyServer"
+      - "mapname=LostIsland"
     volumes:
       - "./save-data:/ark/ShooterGame/Saved"
   ark-server-fjordur:
