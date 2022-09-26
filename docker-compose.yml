@@ -8,5 +8,5 @@ services:
       - "7777:7777/udp"
       - "32330:32330/udp"
     volumes:
-      - "./save-data:/ark/ShooterGame/Saves"
+      - "./save-data:/ark/ShooterGame/Saved"
 
