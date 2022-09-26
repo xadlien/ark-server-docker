@@ -1,12 +1,41 @@
 version: '3'
 services:
-  ark-server:
+  ark-server-island:
     image: ark:latest
     network_mode: bridge
     ports:
       - "27015:27015/udp"
       - "7777:7777/udp"
       - "32330:32330/udp"
+    environment:
+      - "clusterid=knorrark"
+      - "sessionname=KnorrFamilyServer"
+      - "mapname=TheIsland"
     volumes:
       - "./save-data:/ark/ShooterGame/Saved"
-
+  ark-server-ragnarok:
+    image: ark:latest
+    network_mode: bridge
+    ports:
+      - "27016:27015/udp"
+      - "7778:7777/udp"
+      - "32331:32330/udp"
+    environment:
+      - "clusterid=knorrark"
+      - "sessionname=KnorrFamilyServer"
+      - "mapname=Ragnarok"
+    volumes:
+      - "./save-data:/ark/ShooterGame/Saved"  Fjordur
+  ark-server-fjordur:
+    image: ark:latest
+    network_mode: bridge
+    ports:
+      - "27017:27015/udp"
+      - "7779:7777/udp"
+      - "32332:32330/udp"
+    environment:
+      - "clusterid=knorrark"
+      - "sessionname=KnorrFamilyServer"
+      - "mapname=Fjordur"
+    volumes:
+      - "./save-data:/ark/ShooterGame/Saved"
