@@ -7,8 +7,6 @@ services:
       - "27015:27015/udp"
       - "7777:7777/udp"
       - "32330:32330/udp"
-    # volumes:
-    #   - "./save-data:/vrising/save-data"
-    #   - "./GameSettingsPresets:/vrising/VRisingServer_Data/StreamingAssets/GameSettingsPresets"
-    #   - "./Settings:/vrising/VRisingServer_Data/StreamingAssets/Settings"
-    #   - "./logs:/vrising/logs"
+    volumes:
+      - "./save-data:/ark/ShooterGame/Saves"
+
